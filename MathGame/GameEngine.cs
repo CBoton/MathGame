@@ -16,7 +16,6 @@ namespace MathGame
             Stopwatch timer = new Stopwatch();
             int score = 0;
 
-
             int[] difficulty = Helpers.SetDifficulty(GameType.Addition);
             int numberOfQuestions = Helpers.GetNumberOfQuestions();
             string gameDifficulty;
@@ -43,7 +42,6 @@ namespace MathGame
             TimeSpan ts = timer.Elapsed;
             string gameTime = $"Time: {ts.Minutes}min, {ts.Seconds}sec";
             Helpers.AddToHistory(score, GameType.Addition, gameDifficulty, gameTime);
-
             Console.WriteLine($"You got {score} out of {numberOfQuestions} correct in {ts.Minutes}Minutes and {ts.Seconds}Seconds, good game.");
             Console.ReadLine();
         }
@@ -73,7 +71,6 @@ namespace MathGame
                 Console.ReadLine();
                 return false;
             };
-
         }
 
         internal void SubtractionGame(string message)
@@ -81,7 +78,6 @@ namespace MathGame
             Console.Clear();
             Console.WriteLine(message);
             Stopwatch timer = new Stopwatch();
-
 
             var score = 0;
             int[] difficulty = Helpers.SetDifficulty(GameType.Subtraction);
@@ -113,10 +109,9 @@ namespace MathGame
             TimeSpan ts = timer.Elapsed;
             string gameTime = $"Time: {ts.Minutes}min, {ts.Seconds}sec";
             Helpers.AddToHistory(score, GameType.Addition, gameDifficulty, gameTime);
-
             Console.WriteLine($"You got {score} out of  {numberOfQuestions}  correct in n {ts.Minutes}Minutes and {ts.Seconds}Seconds, good game.");
             Helpers.AddToHistory(score, GameType.Subtraction, gameDifficulty, gameTime);
-            Console.WriteLine($"You got {score} out of 5 correct, good game.");
+            Console.WriteLine($"You got {score} out of {numberOfQuestions} correct, good game.");
         }
 
         private bool GetSubtractionQuestion(int[] difficulty)
@@ -175,13 +170,11 @@ namespace MathGame
                 {
                     score++;
                 }
-
             }
             timer.Stop();
             TimeSpan ts = timer.Elapsed;
             string gameTime = $"Time: {ts.Minutes}min, {ts.Seconds}sec";
             Helpers.AddToHistory(score, GameType.Multiplication, gameDifficulty, gameTime);
-
             Console.WriteLine($"You got {score} out of {numberOfQuestions} correct in {ts.Minutes}Minutes and {ts.Seconds}Seconds, good game.");
 
         }
@@ -248,7 +241,6 @@ namespace MathGame
             TimeSpan ts = timer.Elapsed;
             string gameTime = $"Time: {ts.Minutes}min, {ts.Seconds}sec";
             Helpers.AddToHistory(score, GameType.Division, gameDifficulty, gameTime);
-
             Console.WriteLine($"You got {score} out of {numberOfQuestions} correct in {ts.Minutes}Minutes and {ts.Seconds}Seconds, good game.");
         }
 
@@ -332,14 +324,11 @@ namespace MathGame
                         }
                         break;
                 }
-                
-
             }
             timer.Stop();
             TimeSpan ts = timer.Elapsed;
             string gameTime = $"Time: {ts.Minutes}min, {ts.Seconds}sec";
             Helpers.AddToHistory(score, GameType.Random, gameDifficulty, gameTime);
-
             Console.WriteLine($"You got {score} out of {numberOfQuestions} correct in {ts.Minutes}Minutes and {ts.Seconds}Seconds, good game.");
 
         }

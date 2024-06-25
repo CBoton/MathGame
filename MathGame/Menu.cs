@@ -20,7 +20,7 @@
                 Console.WriteLine($@"
 Which game would you like to play today? Choose from the options below:
 A - Addition
-S- Subtraction
+S - Subtraction
 M - Miultiplication
 D - Division
 R - Random
@@ -29,7 +29,6 @@ Q - Quit");
                 Console.WriteLine("--------------------------");
 
                 var gameSelected = Console.ReadLine().Trim().ToLower();
-
 
                 switch (gameSelected)
                 {

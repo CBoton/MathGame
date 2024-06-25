@@ -1,6 +1,4 @@
 ﻿using MathGame.Models;
-using System.Collections.Generic;
-using System.ComponentModel;
 
 namespace MathGame
 {
@@ -19,7 +17,6 @@ namespace MathGame
                 Console.WriteLine("--------------------------");
                 Console.WriteLine("Press any key to return to the main menu");
                 Console.ReadLine();
-            
         }
 
         internal static int[] GetDivisionNumbers(int difficulty = 3)
@@ -57,15 +54,11 @@ namespace MathGame
                     secondNumber = random.Next(2, 999);
                 }
             }
-
             var result = new int[2];
 
             result[0] = firstNumber;
             result[1] = secondNumber;
             
-
-
-
             return result;
         }
 
@@ -102,7 +95,6 @@ namespace MathGame
                 name = Console.ReadLine();
             }
                 return name;
-            
         }
 
         internal static int[] SetDifficulty(GameType gameType)
