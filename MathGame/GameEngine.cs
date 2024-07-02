@@ -1,9 +1,7 @@
 ﻿
 
 using MathGame.Models;
-using System;
 using System.Diagnostics;
-using static System.Formats.Asn1.AsnWriter;
 
 namespace MathGame
 {
@@ -108,10 +106,9 @@ namespace MathGame
             timer.Stop();
             TimeSpan ts = timer.Elapsed;
             string gameTime = $"Time: {ts.Minutes}min, {ts.Seconds}sec";
-            Helpers.AddToHistory(score, GameType.Addition, gameDifficulty, gameTime);
             Console.WriteLine($"You got {score} out of  {numberOfQuestions}  correct in n {ts.Minutes}Minutes and {ts.Seconds}Seconds, good game.");
             Helpers.AddToHistory(score, GameType.Subtraction, gameDifficulty, gameTime);
-            Console.WriteLine($"You got {score} out of {numberOfQuestions} correct, good game.");
+           
         }
 
         private bool GetSubtractionQuestion(int[] difficulty)

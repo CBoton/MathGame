@@ -1,6 +1,5 @@
 ﻿
 using MathGame;
-using Microsoft.VisualBasic;
 
 var menu = new Menu();
 
